@@ -38,4 +38,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: xx
-      - run: echo "deployed"
+        run: echo "deployed"
