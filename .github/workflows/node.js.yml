@@ -33,9 +33,9 @@ jobs:
       with:
         name: dist-files
         path: dist
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    name: deploy
-    run: echo "deployed"
+    steps:
+      - name: xx
+      - run: echo "deployed"
