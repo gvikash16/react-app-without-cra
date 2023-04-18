@@ -19,7 +19,7 @@ jobs:
       uses: actions/cache@v3
       id: npm-cache
       with:
-        path: ~/.npm
+        path: node_modules
         key: deps-restore-modules-${{hashFiles('**/package-lock.json')}}
     - name: Install Dependencies
       if: ${{steps.npm-cache.outputs.cache-hit != 'true'}}
@@ -37,7 +37,7 @@ jobs:
       uses: actions/cache@v3
       id: npm-cache
       with:
-        path: ~/.npm
+        path: node_modules
         key: deps-restore-modules-${{hashFiles('**/package-lock.json')}}
     - name: Install Dependencies
       if: ${{steps.npm-cache.outputs.cache-hit != 'true'}}
@@ -54,4 +54,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Just deployed
-        run: echo "deployed"
+        run: echo "s3 deployed"
